@@ -11,7 +11,7 @@ let fsProvider: CollabFileSystemProvider;
 let docSyncManager: DocumentSyncManager | null = null;
 let providerRegistration: vscode.Disposable | null = null;
 
-const RELAY_SERVER_URL = 'ws://localhost:3000'; // Default relay server URL
+const RELAY_SERVER_URL = 'wss://collab-edit-server-fv8j.onrender.com'; // Default relay server URL
 
 export function activate(context: vscode.ExtensionContext) {
     console.log('Collab Edit Extension activated');
