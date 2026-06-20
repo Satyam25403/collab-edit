@@ -1,0 +1,12 @@
+{
+  "name": "collab-server",
+  "version": "1.0.0",
+  "description": "WebSocket relay server for Collab Edit VS Code extension",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "ws": "^8.12.0"
+  }
+}

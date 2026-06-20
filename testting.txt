@@ -1,0 +1,5 @@
+# Creator window
+code --user-data-dir="C:\Users\priya\vscode-host1-data" --extensionDevelopmentPath="C:\Users\priya\.gemini\antigravity\scratch\collab-edit" "C:\Users\priya\vscode-host1"
+
+# Joiner window
+code --user-data-dir="C:\Users\priya\vscode-host2-data" --extensionDevelopmentPath="C:\Users\priya\.gemini\antigravity\scratch\collab-edit" "C:\Users\priya\vscode-host2"

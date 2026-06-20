@@ -1,0 +1,45 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Run Extension",
+            "type": "extensionHost",
+            "request": "launch",
+            "runtimeExecutable": "${execPath}",
+            "args": [
+                "--extensionDevelopmentPath=${workspaceFolder}"
+            ],
+            "outFiles": ["${workspaceFolder}/out/**/*.js"],
+            "preLaunchTask": "npm: watch"
+        },
+        {
+            "name": "Extension Host 1 (Creator)",
+            "type": "extensionHost",
+            "request": "launch",
+            "runtimeExecutable": "${execPath}",
+            "args": [
+                "--extensionDevelopmentPath=${workspaceFolder}",
+                "--user-data-dir=${workspaceFolder}/.vscode-test-1"
+            ],
+            "outFiles": ["${workspaceFolder}/out/**/*.js"]
+        },
+        {
+            "name": "Extension Host 2 (Joiner)",
+            "type": "extensionHost",
+            "request": "launch",
+            "runtimeExecutable": "${execPath}",
+            "args": [
+                "--extensionDevelopmentPath=${workspaceFolder}",
+                "--user-data-dir=${workspaceFolder}/.vscode-test-2"
+            ],
+            "outFiles": ["${workspaceFolder}/out/**/*.js"]
+        }
+    ],
+    "compounds": [
+        {
+            "name": "Run Both Hosts",
+            "configurations": ["Extension Host 1 (Creator)", "Extension Host 2 (Joiner)"],
+            "stopAll": false
+        }
+    ]
+}
